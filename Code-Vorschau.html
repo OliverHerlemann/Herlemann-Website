@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Vorschau</title>
+    <link rel="stylesheet" href="Everywhere.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    if (localStorage.getItem('access_granted') !== 'true') {
+        window.location.href = 'Passwort-Abfrage.html'; // nur wenn NICHT eingeloggt
+    }
+</script>
+
+<header>
+
+    <h1 class="main-header">Code Vorschau</h1>
+    <nav>
+        <ul class="header-list">
+            <li class="li-header"><a href="Main-Home.html">Startseite</a></li>
+            <li class="li-header"><a href="Lebenslauf.html">Lebenslauf</a></li>
+            <li class="li-header"><a href="Code-Vorschau.html">Code Vorschau</a></li>
+        </ul>
+    </nav>
+</header>
+</body>
+</html>

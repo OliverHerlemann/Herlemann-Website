@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>Access Required</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Oswald&display=swap');
+        .michroma-regular {
+            font-family: "Michroma", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            background-color: #171414;
+            color: #006400;
+            font-family: "Michroma", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            color: white;
+        }
+
+        #gate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #gate h1 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        #passwordInput {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #006400;
+            color: #006400;
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            width: 250px;
+            text-align: center;
+        }
+
+        #passwordInput:focus {
+            outline: none;
+        }
+
+        #error {
+            color: red;
+            margin-top: 0.8rem;
+            display: none;
+        }
+
+        #content {
+            display: none;
+            font-size: 1.2rem;
+            white-space: pre;
+            text-align: center;
+        }
+
+        .typed-cursor {
+            display: inline-block;
+            width: 0.6em;
+            background-color: #006400;
+            animation: blink 1s step-end infinite;
+        }
+        input::placeholder {
+            color: #006400;
+        }
+
+        @keyframes blink {
+            50% { background-color: transparent; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- <audio id="typeSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_755bfb82be.mp3?filename=typewriter-key-3-185304.mp3" preload="auto"></audio> -->
+
+<div id="gate">
+    <h1>Red Pill or Blue Pill?</h1>
+    <input id="passwordInput" type="password" placeholder="Enter password" />
+    <div id="error">Access denied</div>
+</div>
+
+<div id="content">
+    <div><span id="typedOutput"></span><span class="typed-cursor"> </span></div>
+    <div id="countdown"></div>
+</div>
+
+<script>
+    const input = document.getElementById('passwordInput');
+    const gate = document.getElementById('gate');
+    const content = document.getElementById('content');
+    const output = document.getElementById('typedOutput');
+    const error = document.getElementById('error');
+    const countdown = document.getElementById('countdown');
+    // const typeSound = document.getElementById('typeSound');
+
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            const pw = input.value.trim();
+            if (pw === 'I_take_both') {
+                localStorage.setItem('access_granted', 'true');
+                gate.style.display = 'none';
+                content.style.display = 'block';
+                typeText("Zugriff gewährt. Willkommen.", startCountdown);
+            } else {
+                error.style.display = 'block';
+            }
+        }
+    });
+
+    function typeText(text, callback) {
+        let i = 0;
+        const speed = 60;
+        const interval = setInterval(() => {
+            output.textContent += text.charAt(i);
+            // typeSound.currentTime = 0;
+            // typeSound.play();
+            i++;
+            if (i >= text.length) {
+                clearInterval(interval);
+                if (callback) callback();
+            }
+        }, speed);
+    }
+
+    function startCountdown() {
+        let seconds = 5;
+        const interval = setInterval(() => {
+            const line = document.createElement('div');
+            line.textContent = `${seconds}`;
+            countdown.appendChild(line);
+            // typeSound.currentTime = 0;
+            // typeSound.play();
+            seconds--;
+            if (seconds < 0) {
+                clearInterval(interval);
+                window.location.href = 'Main-Home.html';
+            }
+        }, 1000);
+    }
+</script>
+
+</body>
+</html>
