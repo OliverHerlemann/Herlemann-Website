@@ -114,6 +114,10 @@ body::selection {
     background: white;
 }
 
+/* a:visited {
+    color: turquoise;
+} */
+
 #console {
     background-color: black;
     color: #006400;

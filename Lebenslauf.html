@@ -9,23 +9,74 @@
 
     </style>
 </head>
+
 <body>
 
-<script>
-    if (localStorage.getItem('access_granted') !== 'true') {
-        window.location.href = 'Passwort-Abfrage.html'; // nur wenn NICHT eingeloggt
-    }
-</script>
 <header>
-
     <h1 class="main-header">Lebenslauf</h1>
     <nav>
         <ul class="header-list">
-            <li class="li-header"><a href="Main-Home.html">Startseite</a></li>
+            <li class="li-header"><a href="index.html">Startseite</a></li>
             <li class="li-header"><a href="Lebenslauf.html">Lebenslauf</a></li>
             <li class="li-header"><a href="Code-Vorschau.html">Code Vorschau</a></li>
         </ul>
     </nav>
 </header>
+
+<!-- Matrix Rain Background -->
+<canvas id="matrix-left"></canvas>
+<canvas id="matrix-right"></canvas>
+
+<!-- Your main content -->
+<main>
+    <div id="matrix-console-part">
+        <h2>The Matrix Console:</h2>
+
+        <div id="console">
+            <div id="output"></div>
+            <div id="input-line">
+                <span id="prompt">&gt;</span>
+                <span id="input" contenteditable="true"></span>
+                <span class="cursor"></span>
+            </div>
+        </div>
+
+
+        <p class="console-hint">Type "help" for info</p>
+    </div>
+    <br>
+    <br>
+    <h2>Subject: Oliver Herlemann</h2>
+    <br>
+    <h3>Status: Active Learner</h3>
+    <br>
+    <div id="Text-Feld-Vorstellung" style="border: 2px solid white; width: 70%; margin: 45px;">
+        <div style="margin: 30px">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <h4>Impressum</h4>
+    <ul style="list-style: none; padding-left: 0; margin-left: 0;">
+        <li>Oliver Herlemann</li>
+        <li>Wurmbergstr. 29</li>
+        <li>71063 Sindelfingen</li>
+        <li>Germany</li>
+    </ul>
+</footer>
+
+<script src="JScripts.js"></script>
 </body>
 </html>

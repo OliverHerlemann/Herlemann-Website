@@ -127,7 +127,7 @@ function matrixClear() {
 
         switch (cmd.toLowerCase()) {
             case 'help':
-                printLine("Available commands:\nhelp - show this help\nmatrix on - start matrix rain\nmatrix off - stop matrix rain\nclear matrix - clear matrix\ngoto startseite - go to startseite\ngoto lebenslauf - go to lebenslauf\ngoto code vorschau - go to code vorschau\ndelete localstorage - clear saved data\nclear - clear console");
+                printLine("Available commands:\nhelp - show this help\nmatrix on - start matrix rain\nmatrix off - stop matrix rain\nclear matrix - clear matrix\ngoto startseite - go to startseite\ngoto lebenslauf - go to lebenslauf\ngoto code vorschau - go to code vorschau\ndelete localstorage - clear saved data (password reset)\nclear - clear console");
                 break;
             case 'matrix on':
                 printLine("Matrix rain started.");
@@ -144,7 +144,7 @@ function matrixClear() {
             case 'goto startseite':
                 printLine("Loading...");
                 setTimeout(() => {
-                    window.location.href = 'Main-Home.html';
+                    window.location.href = 'index.html';
                     }, 120);
                 break;
             case 'goto lebenslauf':
