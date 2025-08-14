@@ -82,6 +82,27 @@ h4 {
     font-size: 120%;
 }
 
+#navigation-cv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+}
+
+#prev , #next {
+    color: darkgreen;
+    background-color: transparent;
+    transform: scale(1.7);
+}
+
+#Text-Feld-Vorstellung {
+    display: flex;
+    justify-content: center;  /* Horizontal zentrieren */
+    align-items: center;      /* Vertikal zentrieren */
+}
+
 .header-list  {
     display: flex;
     flex-direction: row;

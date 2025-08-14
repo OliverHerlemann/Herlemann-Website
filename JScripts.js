@@ -3,6 +3,7 @@ if (localStorage.getItem('access_granted') !== 'true') {
     window.location.href = 'Passwort-Abfrage.html'; // nur wenn NICHT eingeloggt
 }
 
+//Matrix Regen
 let rainIntervalLeft = null;
 let rainIntervalRight = null;
 
@@ -187,3 +188,48 @@ function matrixClear() {
     function stopMatrixRain() {
         document.body.classList.remove('matrix-active');
     }
+
+    // Lebenslaufeinbindung
+
+const url = 'lebenslauf.pdf'; // Dein PDF
+
+let pdfDoc = null,
+    pageNum = 1,
+    canvas = document.getElementById('pdf-canvas'),
+    ctx = canvas.getContext('2d');
+
+// PDF laden
+pdfjsLib.getDocument(url).promise.then(function(pdf) {
+    pdfDoc = pdf;
+    renderPage(pageNum);
+});
+
+function renderPage(num) {
+    pdfDoc.getPage(num).then(function(page) {
+        const viewport = page.getViewport({ scale: 1.5 }); // Zoomfaktor
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        const renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+        };
+        page.render(renderContext);
+    });
+
+    document.getElementById('page-info').textContent = `${num} / ${pdfDoc.numPages}`;
+}
+
+// Buttons
+document.getElementById('prev').addEventListener('click', function() {
+    if (pageNum <= 1) return;
+    pageNum--;
+    renderPage(pageNum);
+});
+
+document.getElementById('next').addEventListener('click', function() {
+    if (pageNum >= pdfDoc.numPages) return;
+    pageNum++;
+    renderPage(pageNum);
+});
+

@@ -47,37 +47,41 @@
     <br>
     <br>
     <h2>Subject: Oliver Herlemann</h2>
-    <br>
     <h3>Status: Active Learner</h3>
     <br>
-    <div id="Text-Feld-Vorstellung" style="border: 2px solid white; width: 70%; margin: 45px;">
-        <div style="margin: 30px">
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        </div>
+    <br>
+    <div id="navigation-cv">
+        <button id="prev">◀</button>
+        <span id="page-info"></span>
+        <button id="next">▶</button>
     </div>
+    <div id="Text-Feld-Vorstellung" style="border:2px solid white; width:70%; padding: 20px; margin: 45px;">
+        <canvas id="pdf-canvas"></canvas>
+    </div>
+
 
 </main>
 
 <footer>
-    <h4>Impressum</h4>
-    <ul style="list-style: none; padding-left: 0; margin-left: 0;">
-        <li>Oliver Herlemann</li>
-        <li>Email: info@herlemann.org</li>
-        <li>Wurmbergstr. 29</li>
-        <li>71063 Sindelfingen</li>
-        <li>Germany</li>
-    </ul>
+    <div id="Impressum">
+        <h4>Impressum</h4>
+        <ul style="list-style: none; padding-left: 0; margin-left: 0;">
+            <li>Oliver Herlemann</li>
+            <li>Email: info@herlemann.org</li>
+            <li>Wurmbergstr. 29</li>
+            <li>71063 Sindelfingen</li>
+            <li>Germany</li>
+        </ul>
+    </div>
+    <div id="Links-rest">
+        <h4>Links:</h4>
+        <ul style="list-style: none; padding-left: 0; margin-left: 0;">
+            <li><a href="Datenschutz.html">Datenschutzerklärung</a></li>
+        </ul>
+    </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="JScripts.js"></script>
 </body>
 </html>
