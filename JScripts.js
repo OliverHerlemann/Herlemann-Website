@@ -151,12 +151,12 @@ function matrixClear() {
             case 'goto lebenslauf':
                 printLine("Loading...");
                 setTimeout(() => {
-                    window.location.href = 'Lebenslauf.html#Lebenslauf-ueberschrift';
+                    window.location.href = 'Lebenslauf.html#Lebenslauf-ueberschriftID';
                     }, 120);
                 break;
             case 'goto code vorschau':
-                setTimeout(() => {
                 printLine("Loading...");
+                setTimeout(() => {
                     window.location.href = 'Code-Vorschau.html#code-vorschauID';
                     }, 120);
                 break;

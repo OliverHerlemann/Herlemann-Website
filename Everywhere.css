@@ -91,6 +91,7 @@ h1 {
 h2 {
     font-size: 250%;
     text-align: center;
+    scroll-margin-top: 5rem;
 }
 
 h3 {
