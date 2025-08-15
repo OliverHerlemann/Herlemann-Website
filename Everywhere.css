@@ -110,10 +110,16 @@ h4 {
     padding: 0;
 }
 
-#prev , #next {
+button {
     color: darkgreen;
     background-color: transparent;
     transform: scale(1.7);
+    transition: transform 0.6s ease;
+    margin: 15px;
+}
+
+button:hover {
+    transform: scale(2.1);
 }
 
 #Text-Feld-Vorstellung {

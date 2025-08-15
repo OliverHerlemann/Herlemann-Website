@@ -151,13 +151,13 @@ function matrixClear() {
             case 'goto lebenslauf':
                 printLine("Loading...");
                 setTimeout(() => {
-                    window.location.href = 'Lebenslauf.html';
+                    window.location.href = 'Lebenslauf.html#Lebenslauf-ueberschrift';
                     }, 120);
                 break;
             case 'goto code vorschau':
                 setTimeout(() => {
                 printLine("Loading...");
-                    window.location.href = 'Code-Vorschau.html';
+                    window.location.href = 'Code-Vorschau.html#code-vorschauID';
                     }, 120);
                 break;
             case 'delete localstorage':
