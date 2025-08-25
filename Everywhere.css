@@ -100,14 +100,18 @@ h3 {
 }
 
 h4 {
-    font-size: 120%;
+    font-size: 130%;
+}
+
+p {
+    font-size: 130%;
 }
 
 #navigation-cv {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 900px;
     margin: 0;
     padding: 0;
 }
@@ -142,11 +146,17 @@ button:hover {
     gap: 70px;
     margin-bottom: 20px;
 }
+
 a {
     color: white;
     margin: 0;
     text-decoration: underline;
 }
+
+#YT-Link:hover {
+    color: darkgreen;
+}
+
 .header-list li a:hover {
     color: darkgreen;
 }
@@ -158,7 +168,7 @@ a {
     background-size: 200% auto;
 }
 body::selection {
-    color: #006400;
+    color: green;
     background: white;
 }
 
@@ -170,6 +180,7 @@ body::selection {
     background-color: black;
     color: #006400;
     font-family: monospace;
+    font-size: 120%;
     padding: 10px;
     width: 100%;
     max-width: 800px;
@@ -241,5 +252,5 @@ body::selection {
     text-align: center;
     font-family: monospace;
     color: white;
-    font-size: 125%;
+    font-size: 150%;
 }
