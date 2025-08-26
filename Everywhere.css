@@ -54,6 +54,11 @@ header {
     width: 17%;
 }
 
+.Text-Feld-Vorstellung {
+    background-color: #171414 !important;
+    width: 70% !important;
+}
+
 main {
     background-color: #171414;
     display: flex;
@@ -128,11 +133,10 @@ button:hover {
     transform: scale(2.1);
 }
 
-#Text-Feld-Vorstellung {
+/* #Text-Feld-Vorstellung {
     display: flex;
-    justify-content: center;  /* Horizontal zentrieren */
-    align-items: center;      /* Vertikal zentrieren */
-}
+    justify-content: center;
+} */
 
 .header-list  {
     display: flex;
@@ -151,6 +155,10 @@ a {
     color: white;
     margin: 0;
     text-decoration: underline;
+}
+
+a:hover {
+    color: darkgreen;
 }
 
 #YT-Link:hover, .T-shirt_Link:hover {
